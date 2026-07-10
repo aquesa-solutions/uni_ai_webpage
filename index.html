@@ -1,261 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Uni AI — The Intelligence Layer for AI Development</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --paper:#FBFBFA;
-    --ink:#141414;
-    --coral:#E8465C;
-    --line:rgba(20,20,20,0.10);
-    --muted:rgba(20,20,20,0.55);
-  }
+  <meta charset="UTF-8" />
 
-  *{ box-sizing:border-box; margin:0; padding:0; }
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  />
 
-  html{ -webkit-text-size-adjust:100%; }
+  <meta
+    name="description"
+    content="Uni AI connects fragmented artificial intelligence into one evolving intelligence."
+  />
 
-  body{
-    background:var(--paper);
-    color:var(--ink);
-    font-family:'Inter', sans-serif;
-    min-height:100vh;
-    min-height:100dvh;
-    display:flex;
-    flex-direction:column;
-  }
+  <meta name="theme-color" content="#ffffff" />
 
-  a{ color:inherit; text-decoration:none; }
+  <title>Uni AI — Unified Intelligence</title>
 
-  img, svg{ max-width:100%; display:block; }
-
-  button{ font:inherit; }
-
-  .wrap{
-    max-width:900px;
-    width:100%;
-    margin:0 auto;
-    padding:0 clamp(20px,5vw,32px);
-    flex:1;
-    display:flex;
-    flex-direction:column;
-    min-height:0;
-  }
-
-  /* ---------- Nav ---------- */
-  header{ flex-shrink:0; padding-top:clamp(18px,3vh,28px); }
-
-  nav{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    flex-wrap:wrap;
-    gap:12px 20px;
-    padding-bottom:clamp(16px,2.5vh,22px);
-    border-bottom:1px solid var(--line);
-  }
-
-  .logo{
-    font-family:'Space Grotesk', sans-serif;
-    font-weight:700;
-    font-size:14px;
-    letter-spacing:0.02em;
-    white-space:nowrap;
-  }
-  .logo .dot{ color:var(--coral); }
-
-  .nav-actions{ display:flex; align-items:center; gap:clamp(14px,3vw,28px); }
-
-  .nav-link{
-    font-size:13px;
-    color:var(--muted);
-  }
-  .nav-link:hover{ color:var(--ink); }
-
-  .btn{
-    display:inline-block;
-    font-family:'Space Grotesk', sans-serif;
-    font-weight:600;
-    font-size:12.5px;
-    letter-spacing:0.02em;
-    padding:9px 20px;
-    border-radius:999px;
-    border:1px solid var(--ink);
-    background:none;
-    color:var(--ink);
-    cursor:pointer;
-    white-space:nowrap;
-    transition:background 0.15s ease, color 0.15s ease;
-  }
-  .btn:hover{ background:var(--ink); color:var(--paper); }
-  .btn:focus-visible,
-  .nav-link:focus-visible{
-    outline:2px solid var(--coral);
-    outline-offset:3px;
-    border-radius:4px;
-  }
-
-  /* ---------- Hero ---------- */
-  .hero{
-    flex-shrink:0;
-    padding:clamp(28px,6vh,56px) 0 clamp(20px,4vh,36px);
-  }
-
-  .hero .eyebrow{
-    font-family:'Space Grotesk', sans-serif;
-    font-weight:500;
-    font-size:12px;
-    color:var(--muted);
-    margin-bottom:16px;
-  }
-
-  .hero h1{
-    font-family:'Space Grotesk', sans-serif;
-    font-weight:600;
-    font-size:clamp(30px, 6vw, 52px);
-    line-height:1.14;
-    letter-spacing:-0.02em;
-    max-width:16ch;
-  }
-
-  .hero h1 .accent{ color:var(--coral); }
-
-  .hero p{
-    margin-top:18px;
-    max-width:52ch;
-    font-size:clamp(13.5px,2.2vw,14.5px);
-    line-height:1.65;
-    color:var(--muted);
-  }
-
-  /* ---------- Feature list ---------- */
-  .list{
-    flex:1 0 auto;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    border-top:1px solid var(--line);
-    padding:clamp(4px,1vh,0) 0;
-  }
-
-  .row{
-    display:flex;
-    align-items:baseline;
-    gap:clamp(20px,4vw,56px);
-    padding:clamp(14px,2.4vh,20px) 0;
-    border-bottom:1px solid var(--line);
-  }
-  .row:last-child{ border-bottom:none; }
-
-  .row .name{
-    flex:0 0 clamp(90px,20vw,150px);
-    font-family:'Space Grotesk', sans-serif;
-    font-weight:600;
-    font-size:clamp(15px,3vw,18px);
-  }
-
-  .row .desc{
-    font-size:13px;
-    line-height:1.55;
-    color:var(--muted);
-    max-width:60ch;
-  }
-
-  footer{
-    flex-shrink:0;
-    padding:16px 0 clamp(18px,4vh,24px);
-    display:flex;
-    justify-content:space-between;
-    flex-wrap:wrap;
-    gap:6px 16px;
-    font-size:11.5px;
-    color:var(--muted);
-    border-top:1px solid var(--line);
-  }
-
-  .footer-links{
-    display:flex;
-    align-items:center;
-    gap:16px;
-  }
-
-  .footer-link{ color:var(--muted); }
-  .footer-link:hover{ color:var(--ink); }
-  .footer-link:focus-visible{
-    outline:2px solid var(--coral);
-    outline-offset:3px;
-    border-radius:3px;
-  }
-
-  /* ---------- Responsive ---------- */
-  @media (max-width:640px){
-    .row{ flex-direction:column; gap:4px; }
-    .row .name{ flex:0 0 auto; }
-  }
-
-  @media (max-width:420px){
-    .nav-actions{ gap:14px; }
-    .btn{ padding:8px 16px; font-size:12px; }
-  }
-
-  @media (prefers-reduced-motion: reduce){
-    *{ transition:none !important; }
-  }
-</style>
+  <link rel="stylesheet" href="index.css" />
+  <script src="index.js" defer></script>
 </head>
+
 <body>
+  <!-- =====================================================
+       FIXED HEADER
+       ===================================================== -->
 
-<div class="wrap">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Uni AI home">
+      <span>UNI</span>
+      <span class="brand-dot">•</span>
+      <span>AI</span>
+    </a>
 
-  <header>
-    <nav>
-      <div class="logo">UNI<span class="dot">·</span>AI</div>
-      <div class="nav-actions">
-        <a class="nav-link" href="contact.html">Contact Us</a>
-        <a class="btn" href="https://forms.gle/gZei5piN8awbcv5h6" target="_blank" rel="noopener">Get a Quote</a>
-      </div>
+    <nav class="header-navigation" aria-label="Primary navigation">
+      
+
+      <a class="quote-button" href="https://forms.gle/gZei5piN8awbcv5h6" target="_blank" rel="noopener">
+        Join our waitlist
+      </a>
     </nav>
   </header>
 
-  <section class="hero">
-    <div class="eyebrow">Project Intelligence</div>
-    <h1>The permanent brain for <span class="accent">AI</span> work</h1>
-    <p>A persistent memory and reasoning layer that connects you and any AI tool throughout the entire lifecycle of your project.</p>
-  </section>
 
-  <section class="list">
-    <div class="row">
-      <div class="name">Memory</div>
-      <div class="desc">Every decision, change and reason behind it, kept for the life of the project.</div>
-    </div>
-    <div class="row">
-      <div class="name">Reasoning</div>
-      <div class="desc">Understands your project's context before it answers, not just the prompt.</div>
-    </div>
-    <div class="row">
-      <div class="name">Continuity</div>
-      <div class="desc">Switch between Claude, Codex, Cursor or any tool without losing context.</div>
-    </div>
-    <div class="row">
-      <div class="name">Today</div>
-      <div class="desc">From the first idea to production — one brain, the whole way.</div>
-    </div>
-  </section>
+  <!-- =====================================================
+       THREE-SCENE EXPERIENCE
+       Native page scrolling is intentionally disabled.
+       ===================================================== -->
 
-  <footer>
-    <span>© 2026 Uni AI</span>
-    <div class="footer-links">
-      <a class="footer-link" href="terms.html">Terms &amp; Conditions</a>
-      <a class="footer-link" href="privacy.html">Privacy Policy</a>
+  <main
+    id="scene-viewport"
+    class="scene-viewport"
+    aria-label="Uni AI introduction"
+  >
+    <!-- Scene 1 -->
+    <section
+      class="scene is-active"
+      data-scene="0"
+      aria-hidden="false"
+    >
+      <div class="scene-panel scene-panel-text scene-reveal">
+        <div class="text-content">
+          <h1>
+            Beyond AI's amnesia lies an unified intelligence. &nbsp; How?
+          </h1>
+        </div>
+
+        <button
+          class="scroll-cue"
+          type="button"
+          data-next-scene
+          aria-label="Continue to the next scene"
+        >
+          <span class="mouse-icon" aria-hidden="true">
+            <span class="mouse-wheel"></span>
+          </span>
+
+          <span class="scroll-cue-label">
+            Find it out
+          </span>
+        </button>
+      </div>
+    </section>
+
+
+    <!-- Scene 2 -->
+    <section
+      class="scene"
+      data-scene="1"
+      aria-hidden="true"
+      inert
+    >
+      <div class="scene-panel scene-panel-text scene-reveal">
+        <div class="text-content">
+          <p class="subheading">
+            A continuity layer that connects fragmented AI
+            <br class="desktop-break" />
+            into one evolving intelligence.
+          </p>
+        </div>
+
+        <button
+          class="scroll-cue"
+          type="button"
+          data-next-scene
+          aria-label="Continue to the video scene"
+        >
+          <span class="mouse-icon" aria-hidden="true">
+            <span class="mouse-wheel"></span>
+          </span>
+
+          <span class="scroll-cue-label">
+            Want a glimpse?
+          </span>
+        </button>
+      </div>
+    </section>
+
+
+    <!-- Scene 3: MP4 Cutscene -->
+    <section
+      class="scene scene-video"
+      data-scene="2"
+      aria-hidden="true"
+      inert
+    >
+      <div class="video-frame scene-reveal">
+        <video
+          id="continuity-video"
+          class="cutscene-video"
+          muted
+          loop
+          playsinline
+          preload="auto"
+          disablepictureinpicture
+          controlslist="nodownload noplaybackrate noremoteplayback"
+          tabindex="-1"
+          aria-label="Uni AI continuity cutscene"
+        >
+          <source
+            src="assets/continuity-cutscene.mp4"
+            type="video/mp4"
+          />
+
+          Your browser does not support HTML video.
+        </video>
+
+        <div class="video-loading" aria-hidden="true">
+          <span class="loading-dot"></span>
+          <span>Loading continuity</span>
+        </div>
+
+        <div class="video-sheen" aria-hidden="true"></div>
+        <div class="video-vignette" aria-hidden="true"></div>
+      </div>
+    </section>
+
+
+    <!-- Scene position indicator -->
+    <div class="scene-indicator" aria-hidden="true">
+      <span class="indicator-dot is-active"></span>
+      <span class="indicator-dot"></span>
+      <span class="indicator-dot"></span>
     </div>
+  </main>
+
+
+  <!-- =====================================================
+       FIXED FOOTER
+       ===================================================== -->
+
+  <footer class="site-footer">
+    <p class="copyright">
+      © 2026, Aquesa Solutions Private Limited, India. All rights reserved.
+    </p>
+
+    <nav class="footer-navigation" aria-label="Legal navigation">
+      <a class="header-link" href="contact.html">
+        Contact Us
+      </a>
+      
+      <a href="terms.html">
+        Terms &amp; Conditions
+      </a>
+
+      <a href="privacy.html">
+        Privacy Policy
+      </a>
+    </nav>
   </footer>
-
-</div>
-
 </body>
 </html>
