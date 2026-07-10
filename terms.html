@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Use — Uni AI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FBFBFA;
+    --ink:#141414;
+    --coral:#E8465C;
+    --line:rgba(20,20,20,0.10);
+    --muted:rgba(20,20,20,0.55);
+  }
+
+  *{ box-sizing:border-box; margin:0; padding:0; }
+
+  html{ -webkit-text-size-adjust:100%; }
+
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter', sans-serif;
+    min-height:100vh;
+    min-height:100dvh;
+    display:flex;
+    flex-direction:column;
+  }
+
+  a{ color:inherit; text-decoration:none; }
+
+  .wrap{
+    max-width:900px;
+    width:100%;
+    margin:0 auto;
+    padding:0 clamp(20px,5vw,32px);
+    flex:1;
+    display:flex;
+    flex-direction:column;
+  }
+
+  /* ---------- Nav ---------- */
+  header{ flex-shrink:0; padding-top:clamp(18px,3vh,28px); }
+
+  nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:12px 20px;
+    padding-bottom:clamp(16px,2.5vh,22px);
+    border-bottom:1px solid var(--line);
+  }
+
+  .logo{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:700;
+    font-size:14px;
+    letter-spacing:0.02em;
+    white-space:nowrap;
+  }
+  .logo .dot{ color:var(--coral); }
+
+  .nav-actions{ display:flex; align-items:center; gap:clamp(14px,3vw,28px); }
+
+  .nav-link{
+    font-size:13px;
+    color:var(--muted);
+  }
+  .nav-link:hover{ color:var(--ink); }
+
+  .btn{
+    display:inline-block;
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:600;
+    font-size:12.5px;
+    letter-spacing:0.02em;
+    padding:9px 20px;
+    border-radius:999px;
+    border:1px solid var(--ink);
+    background:none;
+    color:var(--ink);
+    cursor:pointer;
+    white-space:nowrap;
+    transition:background 0.15s ease, color 0.15s ease;
+  }
+  .btn:hover{ background:var(--ink); color:var(--paper); }
+  .btn:focus-visible,
+  .nav-link:focus-visible{
+    outline:2px solid var(--coral);
+    outline-offset:3px;
+    border-radius:4px;
+  }
+
+  /* ---------- Doc header ---------- */
+  .doc-head{
+    padding:clamp(28px,6vh,48px) 0 clamp(20px,3vh,28px);
+    border-bottom:1px solid var(--line);
+  }
+
+  .doc-head .eyebrow{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:500;
+    font-size:12px;
+    color:var(--muted);
+    margin-bottom:14px;
+  }
+
+  .doc-head h1{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:600;
+    font-size:clamp(28px,5.5vw,44px);
+    line-height:1.14;
+    letter-spacing:-0.02em;
+  }
+
+  .meta{
+    margin-top:18px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px 28px;
+    font-size:12.5px;
+    color:var(--muted);
+  }
+  .meta strong{ color:var(--ink); font-weight:600; }
+
+  /* ---------- Document body ---------- */
+  .doc{
+    flex:1;
+    padding:clamp(24px,4vh,36px) 0 clamp(40px,6vh,64px);
+  }
+
+  .doc > p.intro{
+    font-size:14px;
+    line-height:1.7;
+    color:var(--muted);
+    max-width:70ch;
+    margin-bottom:clamp(28px,4vh,36px);
+    padding-bottom:clamp(24px,4vh,32px);
+    border-bottom:1px solid var(--line);
+  }
+
+  .section{
+    padding:clamp(20px,3vh,28px) 0;
+    border-bottom:1px solid var(--line);
+    display:flex;
+    gap:clamp(20px,4vw,48px);
+  }
+  .section:last-child{ border-bottom:none; }
+
+  .section .num{
+    flex:0 0 clamp(48px,8vw,64px);
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:600;
+    font-size:13px;
+    color:var(--coral);
+    padding-top:2px;
+  }
+
+  .section .body{ flex:1; min-width:0; }
+
+  .section h2{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:600;
+    font-size:clamp(16px,2.4vw,18px);
+    letter-spacing:-0.01em;
+    margin-bottom:10px;
+  }
+
+  .section p{
+    font-size:13.5px;
+    line-height:1.7;
+    color:var(--muted);
+    max-width:68ch;
+  }
+
+  .section p + p{ margin-top:10px; }
+
+  .section ul{
+    margin-top:8px;
+    padding-left:18px;
+    max-width:68ch;
+  }
+
+  .section li{
+    font-size:13.5px;
+    line-height:1.7;
+    color:var(--muted);
+    margin-bottom:4px;
+  }
+
+  footer{
+    flex-shrink:0;
+    padding:16px 0 clamp(18px,4vh,24px);
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:6px 16px;
+    font-size:11.5px;
+    color:var(--muted);
+    border-top:1px solid var(--line);
+  }
+
+  .footer-links{
+    display:flex;
+    align-items:center;
+    gap:16px;
+  }
+
+  .footer-link{ color:var(--muted); }
+  .footer-link:hover{ color:var(--ink); }
+  .footer-link.current{ color:var(--ink); }
+  .footer-link:focus-visible{
+    outline:2px solid var(--coral);
+    outline-offset:3px;
+    border-radius:3px;
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:640px){
+    .section{ flex-direction:column; gap:6px; }
+    .section .num{ flex:0 0 auto; }
+  }
+
+  @media (max-width:420px){
+    .nav-actions{ gap:14px; }
+    .btn{ padding:8px 16px; font-size:12px; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ transition:none !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header>
+    <nav>
+      <a class="logo" href="/">UNI<span class="dot">·</span>AI</a>
+      <div class="nav-actions">
+        <a class="nav-link" href="/">&larr; Back to home</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="doc-head">
+    <div class="eyebrow">Legal</div>
+    <h1>Terms of Use</h1>
+    <div class="meta">
+      <span>Effective date: <strong>09/07/2026</strong></span>
+      <span>Company: <strong>Aquesa Solutions Pvt Ltd</strong></span>
+    </div>
+  </section>
+
+  <section class="doc">
+
+    <p class="intro">These Terms of Use ("Terms") govern your access to and use of our website, landing pages, forms, waitlist, early-access communications, and related pre-launch services operated by Aquesa Solutions Pvt Ltd Private Limited ("Company," "we," "us," or "our"). By accessing our website or joining our waitlist, you agree to these Terms. If you do not agree, please do not use the website or submit your information.</p>
+
+    <div class="section">
+      <div class="num">01</div>
+      <div class="body">
+        <h2>Current Status: Pre-Launch / Waitlist Only</h2>
+        <p>Our product is currently in a pre-launch stage. At this stage, we provide information about our planned product and allow interested users to join a waitlist or pre-signup list.</p>
+        <p>Joining the waitlist does not create a customer account, paid subscription, service contract, partnership, or guarantee of access to the product.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="num">02</div>
+      <div class="body">
+        <h2>About the Planned Product</h2>
+        <p>We are developing a product intended to help users manage logical, branching, historical, and operational context for AI workflows. The product may help users organize AI-related knowledge, memory, context, and data across multiple AI tools or workflows.</p>
+        <p>The product is under development. Features, pricing, availability, integrations, architecture, security controls, and supported AI providers may change before launch.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="num">03</div>
+      <div class="body">
+        <h2>Eligibility</h2>
+        <p>You must be at least 18 years old to join the waitlist or use our website.</p>
+        <p>By submitting your information, you confirm that you are legally capable of entering into these Terms and that the information you provide is accurate.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="num">04</div>
+      <div class="body">
+        <h2>Waitlist Registration</h2>
+        <p>To join the waitlist, we may ask for information such as your name, email address, country, company name, role, intended use case, or product interest.</p>
+        <p>Our waitlist form may be hosted on Google Forms. When you click the waitlist button, you may leave our website and interact with a form provided through Google's services. Your use of Google Forms may also be subject to Google's applicable terms, policies, and privacy practices.</p>
+        <p>You agree not to submit false, misleading, unlawful, sensitive, confidential, or third-party personal information through the waitlist form unless you have the right to do so.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="num">05</div>
+      <div class="body">
+        <h2>No Guaranteed Access</h2>
+        <p>Joining the waitlist does not guarantee that you will receive access to the product, early access, beta access, a discount, a specific launch timeline, or any particular feature.</p>
+        <p>We may accept, reject, delay, prioritize, or remove waitlist entries at our discretion.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="num">06</div>
+      <div class="body">
+        <h2>Product Changes</h2>
+        <p>Because the product is still under development, all descriptions, screenshots, examples, demos, feature lists, technical claims, and roadmap statements are provided for informational purposes only.</p>
+        <p>We may modify, pause, cancel, rename, or discontinue the product or any planned feature at any time.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="num">07</div>
+      <div class="body">
+        <h2>User Responsibilities</h2>
+        <p>You agree to use our website and waitlist only for lawful purposes. You must not:</p>
+        <ul>
+          <li>interfere with the security or operation of the website;</li>
+          <li>attempt to scrape, overload, reverse engineer, or attack the website;</li>
+          <li>submit spam, malware, or misleading information;</li>
+          <li>impersonate another person or organization;</li>
+          <li>violate applicable laws or third-party rights;</li>
+          <li>submit sensitive personal data, confidential business data, passwords, API keys, private AI prompts, or proprietary content through the waitlist form.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="num">08</div>
+      <div class="body">
+        <h2>Intellectual Property</h2>
+        <p>All rights in our website, branding, product concepts, designs, text, software, documentation, logos, trademarks, and other materials are owned by us or our licensors.</p>
+        <p>You may not copy, reproduce, distribute, modify, sell, or commercially exploit our materials without our prior written permission.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="num">09</div>
+      <div class="body">
+        <h2>Feedback</h2>
+        <p>If you send us ideas, suggestions, comments, feature requests, or other feedback, you grant us a worldwide, royalty-free, irrevocable, perpetual right to use that feedback for product development, business, marketing, and improvement purposes without compensation to you.</p>
+        <p>You confirm that your feedback does not contain confidential information unless we have separately agreed in writing to treat it as confidential.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="num">10</div>
+      <div class="body">
+        <h2>Third-Party Services</h2>
+        <p>Our website or future product may refer to or integrate with third-party AI tools, cloud providers, analytics tools, email providers, authentication systems, or other services.</p>
+        <p>We are not responsible for third-party services, their availability, their terms, their privacy practices, or their outputs. Your use of third-party services may be governed by separate terms and policies.</p>
+        <p>For waitlist collection, we may use Google Forms, Google Sheets, Google Drive, email tools, analytics tools, hosting providers, and other third-party services. We are not responsible for interruptions, errors, security incidents, availability issues, or policy changes caused by third-party services outside our control.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="num">11</div>
+      <div class="body">
+        <h2>No Professional Advice</h2>
+        <p>The website and any product-related content are provided for informational and productivity purposes only. They are not legal, financial, medical, security, compliance, or professional advice.</p>
+        <p>You are responsible for independently verifying information before relying on it.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="num">12</div>
+      <div class="body">
+        <h2>No Warranties</h2>
+        <p>The website, waitlist, and pre-launch materials are provided on an "as is" and "as available" basis.</p>
+        <p>To the maximum extent permitted by law, we disclaim all warranties, whether express, implied, statutory, or otherwise, including warranties of accuracy, reliability, merchantability, fitness for a particular purpose, non-infringement, availability, and security.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="num">13</div>
+      <div class="body">
+        <h2>Limitation of Liability</h2>
+        <p>To the maximum extent permitted by law, we will not be liable for indirect, incidental, special, consequential, exemplary, or punitive damages, or for loss of profits, data, goodwill, business opportunities, or anticipated savings arising from or related to your use of the website, waitlist, or pre-launch materials.</p>
+        <p>Our total liability for any claim related to the website, waitlist, or these Terms will not exceed INR 1,000 or the minimum amount permitted by applicable law, whichever is lower.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="num">14</div>
+      <div class="body">
+        <h2>Indemnity</h2>
+        <p>You agree to indemnify and hold harmless Aquesa Solutions Pvt Ltd Private Limited, its directors, officers, employees, contractors, and agents from any claims, losses, damages, liabilities, costs, or expenses arising from your misuse of the website, breach of these Terms, violation of law, or infringement of third-party rights.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="num">15</div>
+      <div class="body">
+        <h2>Suspension or Removal</h2>
+        <p>We may block access to the website, remove waitlist entries, or stop sending communications if we believe a user has violated these Terms, submitted abusive or unlawful content, or created operational, legal, security, or reputational risk.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="num">16</div>
+      <div class="body">
+        <h2>Privacy</h2>
+        <p>Our collection and use of personal data is described in our Privacy Policy. By using the website or joining the waitlist, you acknowledge that you have read our Privacy Policy.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="num">17</div>
+      <div class="body">
+        <h2>Changes to These Terms</h2>
+        <p>We may update these Terms from time to time. The updated version will be posted on this page with a new effective date.</p>
+        <p>Your continued use of the website after changes are posted means you accept the updated Terms.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="num">18</div>
+      <div class="body">
+        <h2>Governing Law and Jurisdiction</h2>
+        <p>These Terms are governed by the laws of India.</p>
+        <p>Subject to applicable consumer protection laws, the courts located in Vijayawada, AP, India will have exclusive jurisdiction over disputes arising from or related to these Terms, the website, or the waitlist.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="num">19</div>
+      <div class="body">
+        <h2>Contact</h2>
+        <p>For questions about these Terms, contact us at:</p>
+        <p>Aquesa Solutions Pvt Ltd<br>info@aquesa-solutions.com</p>
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+    <span>&copy; 2026, Aquesa Solutions Private Limited, India. All rights reserved.</span>
+    <div class="footer-links">
+      <a class="footer-link" href="privacy.html">Privacy Policy</a>
+      <a class="footer-link" href="contact.html">Contact Us</a>
+    </div>
+  </footer>
+
+</div>
+
+</body>
+</html>
