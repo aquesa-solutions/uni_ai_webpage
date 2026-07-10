@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  />
+
+  <meta
+    name="description"
+    content="Uni AI connects fragmented artificial intelligence into one evolving intelligence."
+  />
+
+  <meta name="theme-color" content="#ffffff" />
+
+  <title>Uni AI — Unified Intelligence</title>
+
+  <link rel="stylesheet" href="index.css" />
+  <script src="index.js" defer></script>
+</head>
+
+<body>
+  <!-- =====================================================
+       FIXED HEADER
+       ===================================================== -->
+
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Uni AI home">
+      <span>UNI</span>
+      <span class="brand-dot">•</span>
+      <span>AI</span>
+    </a>
+
+    <nav class="header-navigation" aria-label="Primary navigation">
+      
+
+      <a class="quote-button" href="https://forms.gle/gZei5piN8awbcv5h6" target="_blank" rel="noopener">
+        Join our waitlist
+      </a>
+    </nav>
+  </header>
+
+
+  <!-- =====================================================
+       THREE-SCENE EXPERIENCE
+       Native page scrolling is intentionally disabled.
+       ===================================================== -->
+
+  <main
+    id="scene-viewport"
+    class="scene-viewport"
+    aria-label="Uni AI introduction"
+  >
+    <!-- Scene 1 -->
+    <section
+      class="scene is-active"
+      data-scene="0"
+      aria-hidden="false"
+    >
+      <div class="scene-panel scene-panel-text scene-reveal">
+        <div class="text-content">
+          <h1>
+            Beyond AI's amnesia lies an unified intelligence. &nbsp; How?
+          </h1>
+        </div>
+
+        <button
+          class="scroll-cue"
+          type="button"
+          data-next-scene
+          aria-label="Continue to the next scene"
+        >
+          <span class="mouse-icon" aria-hidden="true">
+            <span class="mouse-wheel"></span>
+          </span>
+
+          <span class="scroll-cue-label">
+            Find it out
+          </span>
+        </button>
+      </div>
+    </section>
+
+
+    <!-- Scene 2 -->
+    <section
+      class="scene"
+      data-scene="1"
+      aria-hidden="true"
+      inert
+    >
+      <div class="scene-panel scene-panel-text scene-reveal">
+        <div class="text-content">
+          <p class="subheading">
+            A continuity layer that connects fragmented AI
+            <br class="desktop-break" />
+            into one evolving intelligence.
+          </p>
+        </div>
+
+        <button
+          class="scroll-cue"
+          type="button"
+          data-next-scene
+          aria-label="Continue to the video scene"
+        >
+          <span class="mouse-icon" aria-hidden="true">
+            <span class="mouse-wheel"></span>
+          </span>
+
+          <span class="scroll-cue-label">
+            Want a glimpse?
+          </span>
+        </button>
+      </div>
+    </section>
+
+
+    <!-- Scene 3: MP4 Cutscene -->
+    <section
+      class="scene scene-video"
+      data-scene="2"
+      aria-hidden="true"
+      inert
+    >
+      <div class="video-frame scene-reveal">
+        <video
+          id="continuity-video"
+          class="cutscene-video"
+          muted
+          loop
+          playsinline
+          preload="auto"
+          disablepictureinpicture
+          controlslist="nodownload noplaybackrate noremoteplayback"
+          tabindex="-1"
+          aria-label="Uni AI continuity cutscene"
+        >
+          <source
+            src="assets/continuity-cutscene.mp4"
+            type="video/mp4"
+          />
+
+          Your browser does not support HTML video.
+        </video>
+
+        <div class="video-loading" aria-hidden="true">
+          <span class="loading-dot"></span>
+          <span>Loading continuity</span>
+        </div>
+
+        <div class="video-sheen" aria-hidden="true"></div>
+        <div class="video-vignette" aria-hidden="true"></div>
+      </div>
+    </section>
+
+
+    <!-- Scene position indicator -->
+    <div class="scene-indicator" aria-hidden="true">
+      <span class="indicator-dot is-active"></span>
+      <span class="indicator-dot"></span>
+      <span class="indicator-dot"></span>
+    </div>
+  </main>
+
+
+  <!-- =====================================================
+       FIXED FOOTER
+       ===================================================== -->
+
+  <footer class="site-footer">
+    <p class="copyright">
+      © 2026, Aquesa Solutions Private Limited, India. All rights reserved.
+    </p>
+
+    <nav class="footer-navigation" aria-label="Legal navigation">
+      <a class="header-link" href="contact.html">
+        Contact Us
+      </a>
+      
+      <a href="terms.html">
+        Terms &amp; Conditions
+      </a>
+
+      <a href="privacy.html">
+        Privacy Policy
+      </a>
+    </nav>
+  </footer>
+</body>
+</html>
