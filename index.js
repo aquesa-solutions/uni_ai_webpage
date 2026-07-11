@@ -115,7 +115,7 @@ function playCutscene() {
     return;
   }
 
-  continuityVideo.muted = true;
+  continuityVideo.muted = false;
 
   const playback = continuityVideo.play();
 
@@ -139,7 +139,7 @@ function pauseCutscene() {
 }
 
 if (continuityVideo) {
-  continuityVideo.muted = true;
+  continuityVideo.muted = false;
 
   continuityVideo.addEventListener(
     "loadeddata",

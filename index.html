@@ -129,17 +129,16 @@
         <video
           id="continuity-video"
           class="cutscene-video"
-          muted
           loop
           playsinline
           preload="auto"
           disablepictureinpicture
+          oncontextmenu="return false"
           controlslist="nodownload noplaybackrate noremoteplayback"
           tabindex="-1"
-          aria-label="Uni AI continuity cutscene"
-        >
+          aria-label="Uni AI continuity cutscene">
           <source
-            src="assets/continuity-cutscene.mp4"
+            src="https://aquesa-bucket.atl1.digitaloceanspaces.com/Uni%20AI%20intro%20video.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00DZ4YDWQQ6U44QNBX%2F20260711%2Fatl1%2Fs3%2Faws4_request&X-Amz-Date=20260711T063624Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=afbae7e5bde1e1d2d77ed0bd377258c7b3b0d048f70d81dc7d5064232efd5e34"
             type="video/mp4"
           />
 
